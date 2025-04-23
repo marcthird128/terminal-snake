@@ -276,12 +276,12 @@ function render() {
 		}
 		
 		// draw apple
-		rawRes[apple[0] + apple[1] * WIDTH] = APPLE + '\u2B24' + RESET;
+		rawRes[apple[0] + apple[1] * WIDTH] = APPLE + '\u2588' + RESET;
 		
 		// draw bombs
 		for (let i=0; i<bombs.length; i++) {
 			let bomb = bombs[i];
-			rawRes[bomb[0] + bomb[1] * WIDTH] = BOMB + '\u2B24' + RESET;
+			rawRes[bomb[0] + bomb[1] * WIDTH] = BOMB + '\u2588' + RESET;
 		}
 		
 		// draw score
