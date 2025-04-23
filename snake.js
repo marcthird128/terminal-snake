@@ -35,7 +35,7 @@ const CLEAR = '\x1b[0;0H';
 const RESET = '\x1b[0m';
 const APPLE = '\x1b[31m';
 const SNAKE = '\x1b[32m';
-const BOMB = '\x1b[47;34m';
+const BOMB = '\x1b[90m';
 const WIDTH = 70;
 const HEIGHT = 25;
 const STATE_START = 0;
@@ -44,18 +44,18 @@ const STATE_GAMEOVER = 2;
 
 // default screen
 let defaultRes = Array.from({length: WIDTH * HEIGHT}, () => ' ');
-for (let x = 1; x < WIDTH-1; x++) {
-	defaultRes[x] = '-';
-	defaultRes[(HEIGHT-1)*WIDTH+x] = '-';
+for (let x = 1; x < WIDTH; x++) {
+	defaultRes[x] = '\u2550';
+	defaultRes[(HEIGHT-1)*WIDTH+x] = '\u2550';
 }
-for (let y=1; y< HEIGHT-1; y++) {
-	defaultRes[y * WIDTH] = '|';
-	defaultRes[y * WIDTH + WIDTH - 1] = '|';
+for (let y=1; y< HEIGHT; y++) {
+	defaultRes[y * WIDTH] = '\u2551';
+	defaultRes[y * WIDTH + WIDTH - 1] = '\u2551';
 }
-defaultRes[0] = '+';
-defaultRes[WIDTH-1] = '+';
-defaultRes[(HEIGHT-1)*WIDTH] = '+';
-defaultRes[HEIGHT*WIDTH-1] = '+';
+defaultRes[0] = '\u2554';
+defaultRes[WIDTH-1] = '\u2557';
+defaultRes[(HEIGHT-1)*WIDTH] = '\u255A';
+defaultRes[HEIGHT*WIDTH-1] = '\u255D';
 
 ////////////////////////////
 // environment setup code //
@@ -285,7 +285,7 @@ function render() {
 		}
 		
 		// draw score
-		let scoreStr = '' + score;
+		let scoreStr = ' ' + score + ' ';
 		drawString(rawRes, scoreStr, Math.floor(WIDTH / 2) - Math.floor(scoreStr.length / 2), HEIGHT - 1);
 		
 	} else if (state == STATE_GAMEOVER) {
