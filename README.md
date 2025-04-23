@@ -12,5 +12,11 @@ try again. If that doesn't work, then idk whats wrong.
 
 ## Contribute
 
-Currently the code is so simple its all in one unminified file.
-If you want you can organize it better and add webpack and stuff.
+The current code is intentionally simple and contained within a single, 
+unminified file. If you're interested in contributing, here are some ideas for improvement:
+
+* **Code Organization:** You could refactor the code into separate modules or use classes to better organize the game logic, rendering functions, and input handling.
+* **Build Process:** Adding a build tool like Webpack could allow for more complex asset management or code transformations in the future (though it might be overkill for this simple project right now).
+* **New Features:** Feel free to suggest and implement new gameplay elements, visual enhancements, or difficulty settings!
+
+Feel free to fork the repository and submit pull requests with your improvements.
