@@ -150,7 +150,7 @@ function isIllegalBomb(x, y) {
 	let extendedSnake = [];
 	for (let i=0; i<snake.length; i++) {
 		let seg = snake[i];
-		extendedSnake.push(...positionsAround(seg[0], seg[1], 4));
+		extendedSnake.push(...positionsAround(seg[0], seg[1], 3)); // fixed bomb spawn space from snake
 	}
 	if (posInPosList([x, y], extendedSnake)) return true;
 	
