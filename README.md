@@ -4,7 +4,7 @@ A terminal based snake game using node.js
 
 ## Download
 
-Download the `snake-os-platform` file for your platform and run it.
+Download the `snake-os-platform` file for your platform [here](https://github.com/marcthird128/terminal-snake/releases/latest) and run it.
 
 ## Run Source
 
