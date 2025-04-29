@@ -2,7 +2,11 @@
 
 A terminal based snake game using node.js
 
-## Run
+## Download
+
+Download the `snake-os-platform` file for your platform and run it.
+
+## Run Source
 
 Download the `snake.js` file in this repository, open a terminal emulator
 or TTY, navigate to the directory the js file is in, and type `node snake.js`.
