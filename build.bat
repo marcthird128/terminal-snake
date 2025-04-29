@@ -4,7 +4,8 @@ echo Terminal-snake build via pkg
 echo Will fail if you dont have pkg
 echo.
 
-REM remove old buildsf exist "build" (
+REM remove old builds
+if exist "build" (
     del /q "build\*.*"
     echo Old builds removed.
 ) else (
